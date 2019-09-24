@@ -1,4 +1,3 @@
-
 <!-- Nav Start -->
 <div class="classynav">
     <ul>
@@ -16,7 +15,8 @@
         <li><a href="#">Catagories</a>
             <div class="dropdown">
                 <ul class="single-mega cn-col-12">
-                @foreach($categories as $category)
+
+                @foreach($categories_key as $category)
                 <li><a href="#">{{ $category->name}}</a></li>
                 @endforeach
 

@@ -96,9 +96,16 @@
                                 <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
                             </div>
 
+
+
                             <!-- Nav Start -->
-                                @include('navigation') <!--navigation.blade.php-->
+
+                            @include('navigation') <!--navigation.blade.php-->
+
                             <!-- Nav End -->
+
+
+
                         </div>
                     </nav>
                 </div>
