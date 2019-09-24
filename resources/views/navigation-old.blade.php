@@ -16,11 +16,6 @@
         <li><a href="#">Catagories</a>
             <div class="dropdown">
                 <ul class="single-mega cn-col-12">
-                @foreach($categories as $category)
-                <li><a href="#">{{ $category->name}}</a></li>
-                @endforeach
-
-                {{-- <ul class="single-mega cn-col-12">
                     <li><a href="#">Features</a></li>
                     <li><a href="#">Food</a></li>
                     <li><a href="#">Travel</a></li>
@@ -31,8 +26,6 @@
                     <li><a href="#">Fastfood</a></li>
                     <li><a href="#">Salad</a></li>
                     <li><a href="#">Soup</a></li>
-                </ul> --}}
-                
                 </ul>
             </div>
         </li>
