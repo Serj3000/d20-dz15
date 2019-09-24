@@ -22,6 +22,7 @@ class CreatePostsTable extends Migration
             $table->unsignedBigInteger('views');
             $table->text('body');
             $table->string('preview_image');
+            $table->string('preview_cover');
             $table->timestamps();
         });
     }
