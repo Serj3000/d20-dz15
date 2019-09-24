@@ -20,3 +20,4 @@ use d20test_dz15;
 -- ('Categorie 2','2019-07-30','2019-07-30');
 
 select * from categories;
+select * from posts;
