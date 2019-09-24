@@ -24,6 +24,18 @@ class CreatePostsTable extends Migration
             $table->string('preview_image');
             $table->string('preview_cover');
             $table->timestamps();
+
+            //Сформируем связи между таблицами posts users categories
+
+            $table->foreign('user_id')
+                ->references('id')->on('users')
+                ->onUpdate ('cascade')
+                ->onDelete('cascade');
+
+            $table->foreign('category_id')
+                ->references('id')->on('categories')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
         });
     }
 
