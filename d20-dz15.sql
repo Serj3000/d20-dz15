@@ -21,3 +21,4 @@ use d20test_dz15;
 
 select * from categories;
 select * from posts;
+select * from users;
