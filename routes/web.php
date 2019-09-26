@@ -1,5 +1,8 @@
 <?php
 
+use App\Post;
+use App\Category;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,15 +18,15 @@
 //     return view('layout');
 // });
 
-// Route::get('/', function () {
-//     $post=Post::all();
-//     return view('index',['post'=>$post]);
-// })->name('blog.index');
-
-
 Route::get('/', function () {
-    return view('index');
+    $posts=Post::all();
+    return view('index',['postas'=>$posts]);
 })->name('blog.index');
+
+
+// Route::get('/', function () {
+//     return view('index');
+// })->name('blog.index');
 
 Route::get('/contact', function () {
     return view('contact');
