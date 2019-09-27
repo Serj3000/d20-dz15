@@ -247,25 +247,25 @@
 
                         <!-- Single Blog Post -->
 
-                        @foreach($postas as $post)
+                        @foreach($postas as $posted)
 
                         <div class="single-blog-post d-flex flex-wrap mt-50">
                             <!-- Thumbnail -->
                             <div class="post-thumbnail mb-50">
-                                <a href="#"><img src="img/blog-img/{{ $post->preview_image }}" alt=""></a>
+                                <a href="#"><img src="img/blog-img/{{ $posted->preview_image }}" alt=""></a>
                             </div>
                             <!-- Content -->
                             <div class="post-content mb-50">
-                                <p class="post-date">MAY 8, 2018 / {{ $post->category->name }}</p>
+                                <p class="post-date">{{$posted->created_at->format('d M Y')}} / {{ $posted->category->name }}</p>
                                 <a href="#" class="post-title">
-                                    <h4>{{ $post->preview_text }}</h4>
+                                    <h4>{{ $posted->title }}</h4>
                                 </a>
                                 <div class="post-meta">
-                                    <a href="#"><span>by</span>{{ $post->user->name }}</a>
-                                    <a href="#"><i class="fa fa-eye"></i>{{ $post->views }}</a>
+                                    <a href="#"><span>by </span>{{ $posted->user->name }}</a>
+                                    <a href="#"><i class="fa fa-eye"></i>{{ $posted->views }}</a>
                                     <a href="#"><i class="fa fa-comments"></i> 08</a>
                                 </div>
-                                <p class="post-excerpt">{{ $post->preview_text }}</p>
+                                <p class="post-excerpt">{{ $posted->preview_text }}</p>
                                 <a href="#" class="read-more-btn">Continue Reading <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                             </div>
                             <!-- Post Curve Line -->
