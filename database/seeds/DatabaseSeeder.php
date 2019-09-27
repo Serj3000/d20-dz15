@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
 use Faker\Generator as Faker;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,7 +16,7 @@ class DatabaseSeeder extends Seeder
     {
         // $this->call(UsersTableSeeder::class);
 
-        $faker=new Faker;
+        $faker=\Faker\Factory::create();
 
         $categories=[
             ['name'=>'Features', 'slug'=>'features'],
@@ -47,7 +49,7 @@ class DatabaseSeeder extends Seeder
         $posts=[
                         ['user_id'=>$user->id,
             'category_id'=>rand(1,10),
-            'title'=>'111111111111111111111  Vegetarian Spring Pho with Sweet Potato Noodles and Heirloom Beans',//$faker->sentence(),
+            'title'=>$faker->sentence(),
             'preview_text'=>'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.',
             'views'=>0,
             'body'=>'<p>Ten years ago, laborers hammering away at Prague’s cobblestone streets would probably break for lunch with bag of fluffy rohliky bread rolls and some sliced ham, if they couldn’t make it to a pub for goulash and dumplings. Flash-forward to 2018 and the same stonemasons — as well as local shopkeepers, students and chief executives — are likely to prefer bun bo nam bo or pho soup for lunch at one of the city’s fast and cheap Vietnamese noodle restaurants, which have appeared by the dozens in the Czech capital over the past decade.</p>',
@@ -56,7 +58,7 @@ class DatabaseSeeder extends Seeder
             'created_at'=>date('Y-m-d')],
                         ['user_id'=>$user->id,
             'category_id'=>rand(1,10),
-            'title'=>'2222222222222 Vegetarian Spring Pho with Sweet Potato Noodles and Heirloom Beans',
+            'title'=>$faker->sentence(),
             'preview_text'=>'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.',
             'views'=>0,
             'body'=>'<p>Ten years ago, laborers hammering away at Prague’s cobblestone streets would probably break for lunch with bag of fluffy rohliky bread rolls and some sliced ham, if they couldn’t make it to a pub for goulash and dumplings. Flash-forward to 2018 and the same stonemasons — as well as local shopkeepers, students and chief executives — are likely to prefer bun bo nam bo or pho soup for lunch at one of the city’s fast and cheap Vietnamese noodle restaurants, which have appeared by the dozens in the Czech capital over the past decade.</p>',
@@ -65,7 +67,7 @@ class DatabaseSeeder extends Seeder
             'created_at'=>date('Y-m-d')],
                         ['user_id'=>$user->id,
             'category_id'=>rand(1,10),
-            'title'=>'Vegetarian Spring Pho with Sweet Potato Noodles and Heirloom Beans',
+            'title'=>$faker->sentence(),//'Vegetarian Spring Pho with Sweet Potato Noodles and Heirloom Beans',
             'preview_text'=>'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.',
             'views'=>0,
             'body'=>'<p>Ten years ago, laborers hammering away at Prague’s cobblestone streets would probably break for lunch with bag of fluffy rohliky bread rolls and some sliced ham, if they couldn’t make it to a pub for goulash and dumplings. Flash-forward to 2018 and the same stonemasons — as well as local shopkeepers, students and chief executives — are likely to prefer bun bo nam bo or pho soup for lunch at one of the city’s fast and cheap Vietnamese noodle restaurants, which have appeared by the dozens in the Czech capital over the past decade.</p>',
@@ -74,7 +76,7 @@ class DatabaseSeeder extends Seeder
             'created_at'=>date('Y-m-d')],
                             ['user_id'=>$user->id,
             'category_id'=>rand(1,10),
-            'title'=>'Vegetarian Spring Pho with Sweet Potato Noodles and Heirloom Beans',
+            'title'=>$faker->sentence(),//'Vegetarian Spring Pho with Sweet Potato Noodles and Heirloom Beans',
             'preview_text'=>'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.',
             'views'=>0,
             'body'=>'<p>Ten years ago, laborers hammering away at Prague’s cobblestone streets would probably break for lunch with bag of fluffy rohliky bread rolls and some sliced ham, if they couldn’t make it to a pub for goulash and dumplings. Flash-forward to 2018 and the same stonemasons — as well as local shopkeepers, students and chief executives — are likely to prefer bun bo nam bo or pho soup for lunch at one of the city’s fast and cheap Vietnamese noodle restaurants, which have appeared by the dozens in the Czech capital over the past decade.</p>',
@@ -83,7 +85,7 @@ class DatabaseSeeder extends Seeder
             'created_at'=>date('Y-m-d')],
                             ['user_id'=>$user->id,
             'category_id'=>rand(1,10),
-            'title'=>'Vegetarian Spring Pho with Sweet Potato Noodles and Heirloom Beans',
+            'title'=>$faker->sentence(),//'Vegetarian Spring Pho with Sweet Potato Noodles and Heirloom Beans',
             'preview_text'=>'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.',
             'views'=>0,
             'body'=>'<p>Ten years ago, laborers hammering away at Prague’s cobblestone streets would probably break for lunch with bag of fluffy rohliky bread rolls and some sliced ham, if they couldn’t make it to a pub for goulash and dumplings. Flash-forward to 2018 and the same stonemasons — as well as local shopkeepers, students and chief executives — are likely to prefer bun bo nam bo or pho soup for lunch at one of the city’s fast and cheap Vietnamese noodle restaurants, which have appeared by the dozens in the Czech capital over the past decade.</p>',
