@@ -375,8 +375,14 @@
 
                     <!-- Pager -->
                     <ol class="foode-pager mt-50">
-                        <li><a href="#"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> Newer</a></li>
-                        <li><a href="#">Older <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
+                        @if ($postas->currentPage()!=1)
+                        <li><a href="{{ $postas->previousPageUrl() }}"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> Newer</a></li>
+                        @endif
+                        
+                        @if ($postas->currentPage()!=$postas->lastPage())
+                        <li><a href="{{ $postas->nextPageUrl() }}">Older <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
+                        @endif
+                        
                     </ol>
                 </div>
 

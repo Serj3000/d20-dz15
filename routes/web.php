@@ -19,7 +19,8 @@ use App\Category;
 // });
 
 Route::get('/', function () {
-    $posts=Post::all();
+    //$posts=Post::all();
+    $posts=Post::latest()->paginate(5);
     return view('index',['postas'=>$posts]);
 })->name('blog.index');
 
