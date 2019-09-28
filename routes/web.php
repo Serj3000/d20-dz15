@@ -3,6 +3,7 @@
 use App\Post;
 use App\Category;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -50,7 +51,73 @@ Route::get('/test', function () {
     dd($result);
 })->name('blog.test');
 
-Route::get('/category', function () {
-    $result=factory(\App\Category::class,10)->create();
-    dd($result);
-})->name('blog.category');
+// Route::get('/category', function () {
+//     $result=factory(\App\Category::class,10)->create();
+//     dd($result);
+// })->name('blog.category');
+
+Route::get('/categories', function () {
+    return view('categories');
+ })->name('blog.categories');
+
+//___________________________________________
+
+// Route::get('/categories/features', function () {
+//     $result='eeeeeeeeeee';
+//     dd($result);
+//     //return view('categories');
+//  })->name('blog.categories-features');
+
+//  Route::get('/categories/food', function () {
+//     $result='eeeeeeeeeee';
+//     dd($result);
+//     //return view('categories');
+//  })->name('blog.categories-food');
+
+//  Route::get('/categories/travel', function () {
+//     $result='eeeeeeeeeee';
+//     dd($result);
+//     //return view('categories');
+//  })->name('blog.categories-travel');
+
+//  Route::get('/categories/recipe', function () {
+//     $result='eeeeeeeeeee';
+//     dd($result);
+//     //return view('categories');
+//  })->name('blog.categories-recipe');
+
+//  Route::get('/categories/bread', function () {
+//     $result='eeeeeeeeeee';
+//     dd($result);
+//     //return view('categories');
+//  })->name('blog.categories-bread');
+
+//  Route::get('/categories/breakfast', function () {
+//     $result='eeeeeeeeeee';
+//     dd($result);
+//     //return view('categories');
+//  })->name('blog.categories-breakfast');
+
+//  Route::get('/categories/meat', function () {
+//     $result='eeeeeeeeeee';
+//     dd($result);
+//     //return view('categories');
+//  })->name('blog.categories-meat');
+
+//  Route::get('/categories/fastfood', function () {
+//     $result='eeeeeeeeeee';
+//     dd($result);
+//     //return view('categories');
+//  })->name('blog.categories-fastfood');
+
+//   Route::get('/categories/features', function () {
+//     $result='eeeeeeeeeee';
+//     dd($result);
+//     //return view('categories');
+//  })->name('blog.categories-features');
+
+//  Route::get('/categories/soup', function () {
+//     $result='eeeeeeeeeee';
+//     dd($result);
+//     //return view('categories');
+//  })->name('blog.categories-soup');

@@ -12,12 +12,12 @@
                 <li><a href="typography.html">Typography</a></li>
             </ul>
         </li>
-        <li><a href="#">Catagories</a>
+        <li><a href="{{route('blog.categories')}}">Catagories</a>
             <div class="dropdown">
                 <ul class="single-mega cn-col-12">
 
                 @foreach($categories_key as $category)
-                <li><a href="#">{{ $category->name}}</a></li>
+                <li><a href="{{route('blog.categories-'.$category->slug)}}">{{$category->name}}</a></li>
                 @endforeach
 
                 {{-- <ul class="single-mega cn-col-12">
