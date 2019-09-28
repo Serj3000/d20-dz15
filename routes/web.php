@@ -57,7 +57,8 @@ Route::get('/test', function () {
 // })->name('blog.category');
 
 Route::get('/categories', function () {
-    return view('categories');
+    $posts=Post::latest()->paginate(5);
+    return view('categories',['postas'=>$posts]);
  })->name('blog.categories');
 
 //___________________________________________
@@ -110,11 +111,11 @@ Route::get('/categories', function () {
 //     //return view('categories');
 //  })->name('blog.categories-fastfood');
 
-//   Route::get('/categories/features', function () {
+//   Route::get('/categories/salad', function () {
 //     $result='eeeeeeeeeee';
 //     dd($result);
 //     //return view('categories');
-//  })->name('blog.categories-features');
+//  })->name('blog.categories-salad');
 
 //  Route::get('/categories/soup', function () {
 //     $result='eeeeeeeeeee';

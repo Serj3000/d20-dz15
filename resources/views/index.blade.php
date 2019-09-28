@@ -382,8 +382,8 @@
                         @if ($postas->currentPage()!=$postas->lastPage())
                         <li><a href="{{ $postas->nextPageUrl() }}">Older <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
                         @endif
-                        
                     </ol>
+                    
                 </div>
 
                 <!-- Blog Sidebar Area -->

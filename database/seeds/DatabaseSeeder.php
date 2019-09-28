@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
             ['name'=>'Breakfast', 'slug'=>'breakfast'],
             ['name'=>'Meat', 'slug'=>'meat'],
             ['name'=>'Fastfood', 'slug'=>'fastfood'],
-            ['name'=>'Salad', 'slug'=>'features'],
+            ['name'=>'Salad', 'slug'=>'salad'],
             ['name'=>'Soup', 'slug'=>'soup']
         ];
 

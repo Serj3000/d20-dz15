@@ -17,7 +17,8 @@
                 <ul class="single-mega cn-col-12">
 
                 @foreach($categories_key as $category)
-                <li><a href="{{route('blog.categories-'.$category->slug)}}">{{$category->name}}</a></li>
+                <li><a href="#">{{$category->name}}</a></li>
+                {{-- <li><a href="{{route('blog.categories-'.$category->slug)}}">{{$category->name}}</a></li> --}}
                 @endforeach
 
                 {{-- <ul class="single-mega cn-col-12">
